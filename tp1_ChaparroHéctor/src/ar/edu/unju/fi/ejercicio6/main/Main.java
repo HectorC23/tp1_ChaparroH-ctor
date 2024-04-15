@@ -57,6 +57,9 @@ public class Main {
 		
 		Persona lucas = new Persona(dni,nombre,LocalDate.parse(fecha));
 		System.out.println(lucas.mostrarDatos());
+		
+		
+		sc.close();
 
 	}
 

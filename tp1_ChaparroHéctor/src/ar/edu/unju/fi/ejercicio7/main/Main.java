@@ -29,6 +29,8 @@ public class Main {
 		hector.darAumento();
 		System.out.println(hector.mostrarDatos());
 		
+		sc.close();
+		
 
 	}
 
