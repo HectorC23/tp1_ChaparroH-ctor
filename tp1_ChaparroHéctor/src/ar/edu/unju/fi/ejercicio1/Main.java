@@ -5,8 +5,15 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		
+//		Consigna 1
+//		Dentro del paquete creado para el ejercicio crear la clase Main que contenga al método main().
+//		Declare 5 variables de tipo entero para almacenar valores numéricos.
+//		Asigne valores numéricos a cada una de las variables.
+//		Calcule el promedio y guarde el resultado en otra variable. Muestre por consola el resultado
+//		obtenido.
+//		Ejemplo:
 //		8, 5, 1, 20, 9
+//		El promedio es: 8.6
 		
 		int a = 8;
 		int b = 5;
