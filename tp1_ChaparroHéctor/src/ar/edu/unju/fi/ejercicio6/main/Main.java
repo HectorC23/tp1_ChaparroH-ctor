@@ -30,7 +30,7 @@ public class Main {
 		pedro.setFechaDeNacimiento(LocalDate.parse(fecha));
 		pedro.setProvincia("Jujuy");
 
-		System.out.println(pedro.toString());
+		System.out.println(pedro.mostrarDatos());
 		
 		//---------------------------------------------------
 		
@@ -44,7 +44,7 @@ public class Main {
 		provincia = sc.next();
 		
 		Persona hector = new Persona(dni,nombre,LocalDate.parse(fecha),provincia);
-		System.out.println(hector.toString());
+		System.out.println(hector.mostrarDatos());
 		
 		//---------------------------------------------------
 		
@@ -56,7 +56,7 @@ public class Main {
 		fecha = sc.next();
 		
 		Persona lucas = new Persona(dni,nombre,LocalDate.parse(fecha));
-		System.out.println(lucas.toString());
+		System.out.println(lucas.mostrarDatos());
 
 	}
 

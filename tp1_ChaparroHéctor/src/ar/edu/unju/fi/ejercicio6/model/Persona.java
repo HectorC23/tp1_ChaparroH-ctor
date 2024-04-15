@@ -21,6 +21,8 @@ public class Persona {
 		this.fechaDeNacimiento = fechaDeNacimiento;
 		this.provincia = provincia;
 	}
+	
+	
 	public Persona(String dni, String nombre, LocalDate fechaDeNacimiento) {
 		super();
 		this.dni = dni;
@@ -45,8 +47,7 @@ public class Persona {
 	}
 	
 	
-	@Override
-	public String toString() {
+	public String mostrarDatos() {
 		
 		if (this.mayorDeEdad()) {
 			return "Los Datos de la persona son: \nDNI = " + dni + ", nombre = " + nombre + ", fechaDeNacimiento = " + fechaDeNacimiento
