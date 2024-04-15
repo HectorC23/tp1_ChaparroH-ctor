@@ -13,7 +13,15 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		
 		
-		Empleado hector = new Empleado("Hector", "F-18", 220000);
+		System.out.println("Ingrese el Nombre: ");
+		String nombre = sc.next();
+		System.out.println("Ingrese el Legajo: ");
+		String legajo = sc.next();
+		System.out.println("Ingrese el Salario (con coma): ");
+		double salario = sc.nextDouble();
+		
+		
+		Empleado hector = new Empleado(nombre, legajo, salario);
 		
 		
 		System.out.println(hector.mostrarDatos());
