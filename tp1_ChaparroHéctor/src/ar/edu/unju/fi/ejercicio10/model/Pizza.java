@@ -9,9 +9,9 @@ public class Pizza {
 	private double area;
 	private boolean ingredientesEspeciales;
 	
-	public static final int veinte = 500;
-	public static final int treinta = 750;
-	public static final int cuarenta = 1000;
+	public static final int VEINTE = 500;
+	public static final int TREINTA = 750;
+	public static final int CUARENTA = 1000;
 	
 	
 	public Pizza() {
@@ -27,7 +27,7 @@ public class Pizza {
 				this.precio = 4500;
 				
 			} else {
-				this.precio = 4500 + veinte; //5000
+				this.precio = 4500 + VEINTE; //5000
 			}
 			
 		} else if(this.diametro == 30 ) {
@@ -36,7 +36,7 @@ public class Pizza {
 				this.precio =  4800;
 				
 			} else {
-				this.precio =  4800 + treinta; //5500
+				this.precio =  4800 + TREINTA; //5500
 			}
 			
 
@@ -46,7 +46,7 @@ public class Pizza {
 				this.precio =  5500;
 				
 			} else {
-				this.precio =  5500 + cuarenta; //6500
+				this.precio =  5500 + CUARENTA; //6500
 			}
 			
 		}
