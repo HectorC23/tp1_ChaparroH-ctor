@@ -21,7 +21,7 @@ public class Main {
 			
 		}
 		
-		System.out.println("\n Lista de números: ");
+		System.out.println("\n Arreglo de números: ");
 		
 		for (int i = 0; i < elements.length; i++) {
 			System.out.println("Indice: " + i + " - Número: " + elements[i]);

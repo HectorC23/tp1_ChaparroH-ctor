@@ -23,7 +23,7 @@ public class Main {
 			
 		} while (n < 5 || n >10);
 		
-		System.out.println("\n Lista creada\n");
+		System.out.println("\n Arreglo creada\n");
 		
 		String[] palabras = new String[n];
 		
@@ -33,7 +33,7 @@ public class Main {
 			palabras[i] = sc.next();
 			
 		}
-		System.out.println("\n El contenido del array invertido es: \n");
+		System.out.println("\n El contenido del arreglo invertido es: \n");
 		for (int i = (palabras.length - 1); i >= 0; i--) {
 			System.out.println("Indice: " + i + " - Nombre: " + palabras[i]);
 		}

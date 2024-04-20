@@ -23,7 +23,7 @@ public class Main {
 			
 		} while (n < 5 || n >10);
 		
-		System.out.println("\n Lista creada\n");
+		System.out.println("\n Arreglo creada\n");
 		
 		String[] palabras = new String[n];
 		
@@ -40,7 +40,7 @@ public class Main {
 			acu = acu + Integer.parseInt(palabras[i]);
 		}
 		
-		System.out.println("La suma de todos los valores del array es: " + acu);
+		System.out.println("La suma de todos los valores del arreglo es: " + acu);
 
 		sc.close();
 	}
