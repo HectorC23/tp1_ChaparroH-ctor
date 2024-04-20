@@ -34,15 +34,29 @@ public class Persona {
 	
 	public int calcularEdad() {
 		LocalDate fechaActual = LocalDate.now();
-		if ((fechaActual.getYear() > fechaDeNacimiento.getYear()) && (fechaActual.getMonthValue() >= fechaDeNacimiento.getMonthValue()) && (fechaActual.getDayOfMonth() >= fechaDeNacimiento.getDayOfMonth()) ) {
-			return (fechaActual.getYear()-fechaDeNacimiento.getYear());	
+		if ((fechaActual.getYear() > fechaDeNacimiento.getYear())) {
+			if(fechaActual.getMonthValue() >= fechaDeNacimiento.getMonthValue()) {
+				if (fechaActual.getMonthValue() == fechaDeNacimiento.getMonthValue()) {
+					if((fechaActual.getDayOfMonth() < fechaDeNacimiento.getDayOfMonth())){
+						return ((fechaActual.getYear()- fechaDeNacimiento.getYear())-1); //
+					} else {
+						return (fechaActual.getYear()- fechaDeNacimiento.getYear());
+					}
+				} else {
+					return (fechaActual.getYear()- fechaDeNacimiento.getYear()); //
+				}
+			} else {
+				return (fechaActual.getYear()-fechaDeNacimiento.getYear());
+			}	
 		}
-		return (fechaActual.getYear()-fechaDeNacimiento.getYear()-1);	
+		else {
+			return (fechaActual.getYear()-fechaDeNacimiento.getYear());
+		}
 	}
 	
 	public boolean mayorDeEdad() {
 		
-		return this.calcularEdad() >= 18;
+		return (this.calcularEdad() >= 18);
 			
 	}
 	

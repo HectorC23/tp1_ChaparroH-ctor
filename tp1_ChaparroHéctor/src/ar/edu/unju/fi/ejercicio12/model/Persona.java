@@ -17,8 +17,22 @@ public class Persona {
 		
 		Calendar hoy = Calendar.getInstance();
 		
-		if ((hoy.get(Calendar.YEAR) > fechaDeNacimiento.get(Calendar.YEAR)) && (hoy.get(Calendar.MONTH) >= fechaDeNacimiento.get(Calendar.MONTH)) && (hoy.get(Calendar.DAY_OF_MONTH) >= fechaDeNacimiento.get(Calendar.DAY_OF_MONTH))) {
-			return (hoy.get(Calendar.YEAR)- fechaDeNacimiento.get(Calendar.YEAR));	
+		if ((hoy.get(Calendar.YEAR) > fechaDeNacimiento.get(Calendar.YEAR)) && (hoy.get(Calendar.MONTH) >= fechaDeNacimiento.get(Calendar.MONTH))) {
+			
+			if((hoy.get(Calendar.MONTH) == fechaDeNacimiento.get(Calendar.MONTH))) {
+				
+				
+				if((hoy.get(Calendar.DAY_OF_MONTH) > fechaDeNacimiento.get(Calendar.DAY_OF_MONTH))){
+					return (hoy.get(Calendar.YEAR)- fechaDeNacimiento.get(Calendar.YEAR) - 1);
+				} else {
+					return (hoy.get(Calendar.YEAR)- fechaDeNacimiento.get(Calendar.YEAR));
+				}
+				
+			} else {
+				return (hoy.get(Calendar.YEAR)- fechaDeNacimiento.get(Calendar.YEAR));
+			}
+				
+			
 		}
 		
 		
@@ -139,12 +153,30 @@ public class Persona {
 		
 		String estacion;
 		
-		if ((fechaDeNacimiento.get(Calendar.MONTH) <= 2) && ( fechaDeNacimiento.get(Calendar.DAY_OF_MONTH) < 22 )) {
-			estacion = "Verano";
-		} else if( (fechaDeNacimiento.get(Calendar.MONTH) <= 5) && ( fechaDeNacimiento.get(Calendar.DAY_OF_MONTH) < 22 ) ) {
-			estacion = "Otoño";
-		} else if( (fechaDeNacimiento.get(Calendar.MONTH) <= 8) && ( fechaDeNacimiento.get(Calendar.DAY_OF_MONTH) < 22 ) ) {
-			estacion = "Invierno";
+		if ((this.fechaDeNacimiento.get(Calendar.MONTH) < 3)) {
+			if(this.fechaDeNacimiento.get(Calendar.MONTH) < 2 ) {
+				estacion = "Verano";
+			} else if (( this.fechaDeNacimiento.get(Calendar.DAY_OF_MONTH)) < 22) {
+				estacion = "Verano";
+			} else {
+				estacion = "Otoño";
+			}
+		} else if( (this.fechaDeNacimiento.get(Calendar.MONTH) < 6) ) {
+			if(this.fechaDeNacimiento.get(Calendar.MONTH) < 5 ) {
+				estacion = "Otoño";
+			} else if (( this.fechaDeNacimiento.get(Calendar.DAY_OF_MONTH)) < 22) {
+				estacion = "Otoño";
+			} else {
+				estacion = "Invierno";
+			}
+		} else if( (this.fechaDeNacimiento.get(Calendar.MONTH) < 9) ) {
+			if(this.fechaDeNacimiento.get(Calendar.MONTH) < 8 ) {
+				estacion = "Invierno";
+			} else if (( this.fechaDeNacimiento.get(Calendar.DAY_OF_MONTH)) < 22) {
+				estacion = "Invierno";
+			} else {
+				estacion = "Primavera";
+			}
 		} else {
 			estacion = "Primavera";
 		}
