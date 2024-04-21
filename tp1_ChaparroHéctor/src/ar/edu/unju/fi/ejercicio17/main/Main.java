@@ -18,37 +18,27 @@ public class Main {
 		
 //		ArrayList arrayPlayers = new ArrayList;
 		
-		Jugador player = new Jugador("hector", "chaparro", LocalDate.parse("2000-04-21"), "Argentina", 1.64f , 55.500f, "delantero");
-		Jugador player2 = new Jugador("lucas", "mamani", LocalDate.parse("2000-04-21"), "Perú", 1.64f , 55.500f, "delantero");
+		Jugador player = new Jugador("hector", "chaparro", LocalDate.parse("2000-11-30"), "Argentina", 1.64f , 55.500f, "delantero");
+		Jugador player2 = new Jugador("lucas", "mamani", LocalDate.parse("2000-04-21"), "Perú", 1.64f , 55.500f, "medio");
 		
-		System.out.println(player.calcularEdad());
+//		System.out.println(player.calcularEdad());
 		
 		jugadores.add(player);
 		jugadores.add(player2);
-		System.out.println(jugadores.size());
+//		System.out.println(jugadores.size());
 		
 		
+//		System.out.println(player.getApellido().equals("chaparro"));
+//		jugadores.forEach(e -> System.out.println(e));
+		
+//		System.out.println(jugadores.get(0).getApellido());
 		Scanner sc = new Scanner(System.in);
-		System.out.println(player.getApellido().equals("chaparro"));
-		jugadores.forEach(e -> System.out.println(e));
-		System.out.println(jugadores.get(0).getApellido());
 		
 		int op;
 		Jugador auxiliar = null;
 		
 		do {
 			menu();
-//			do {
-//				
-//				try {
-//					
-//					op = sc.nextInt();
-//				} catch (Exception e) {
-//					System.out.println("Error: " + e.getMessage());
-//					sc.nextLine();
-//				}
-//				
-//			} while (true);
 			
 			do {
 	            try {
@@ -323,6 +313,8 @@ public class Main {
 					
 					System.out.println("\n Se modificó al jugador con exito \n ");
 					break;
+				} else if (jugadores.get(jugadores.size()-1) == player ) {
+					System.out.println("\n Jugador no encontrado \n ");
 				}
 			}
 		}
@@ -374,7 +366,7 @@ public class Main {
 //			
 //		}
 		System.out.println("El Array de jugadores tiene en total: " + jugadores.size() + " jugadores");
-		jugadores.forEach((e) -> System.out.println(e));
+		jugadores.forEach((e) -> System.out.println(e.toString()));
 		
 	}
 	
@@ -388,15 +380,16 @@ public class Main {
 		
 		
 //		jugadores.forEach(e -> if(e.getNacionalidad) {});
-		
+		int cont = 0;
 		Iterator<Jugador> iterator = jugadores.iterator();
-		
 		while(iterator.hasNext()) {
 			Jugador player = iterator.next();
 			if(player.getNacionalidad().compareTo(nacionalidadBuscada)==0){
+				cont++;
 				System.out.println(player.toString());
 			}
 		}
+		System.out.println("\nLa cantidad total de jugadores pertenecientes a la nacionalidad: " + nacionalidadBuscada + ", es de: " + cont + " jugador/es");
 //		sc.close();
 	}
 	
